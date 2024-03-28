@@ -5,22 +5,21 @@ on:
       - main
   pull_request:
 jobs:
-  tfsec-qa:
+  tfsec:
     name: tfsec sarif report
     runs-on: ubuntu-latest
 
     steps:
       - name: Clone repo
-        uses: actions/checkout@main
+        uses: actions/checkout@master
 
       - name: tfsec
-        uses: tfsec/tfsec-sarif-action@master
+        uses: tfsec/tfsec-sarif-action@main
         with:
-          working_directory: ./custom_iac/
           sarif_file: tfsec.sarif         
 
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v1
         with:
           # Path to SARIF file relative to the root of the repository
           sarif_file: tfsec.sarif    
