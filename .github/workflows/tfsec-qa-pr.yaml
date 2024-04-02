@@ -13,6 +13,6 @@ jobs:
       - name: tfsec
         uses: tfsec/tfsec-pr-commenter-action@main
         with:
-          tfsec_args: --force-all-dirs
+          #tfsec_args: --force-all-dirs
           working_directory: ''
           github_token: ${{ secrets._GITHUB_TOKEN }}

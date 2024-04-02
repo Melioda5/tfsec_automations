@@ -2,7 +2,7 @@ resource "aws_s3_bucket" "s3_new" {
   bucket = "tfsec-s3-test-2"
 
   tags = {
-    Name        = "My bucket new"
+    Name        = "My bucket new 2"
     Environment = "Devuwuj"
   }
 }
