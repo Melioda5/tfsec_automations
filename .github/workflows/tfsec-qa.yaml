@@ -16,7 +16,7 @@ jobs:
       - name: tfsec
         uses: tfsec/tfsec-sarif-action@master
         with:
-          full_repo_scan: 
+          full_repo_scan
           sarif_file: tfsec.sarif         
 
       - name: Upload SARIF file
