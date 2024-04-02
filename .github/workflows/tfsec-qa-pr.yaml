@@ -14,4 +14,5 @@ jobs:
         uses: tfsec/tfsec-pr-commenter-action@main
         with:
           tfsec_args: --force-all-dirs
+          working_directory: ''
           github_token: ${{ secrets._GITHUB_TOKEN }}
